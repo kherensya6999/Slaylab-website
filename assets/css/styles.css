@@ -1,0 +1,114 @@
+/* Custom CSS for Cosmetics Store */
+
+/* Custom gradient for hero banner */
+.bg-gradient {
+  background: linear-gradient(to right, #f8e1eb, #e6e1f8);
+}
+
+/* Product card hover effect */
+.card {
+  transition: all 0.3s ease;
+  border: 1px solid #e83e8c; /* Border pink */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Custom primary color for the cosmetics theme */
+.btn-primary {
+  background-color: #e83e8c; /* Pink */
+  border-color: #e83e8c;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #d33076; /* Darker pink */
+  border-color: #d33076;
+}
+
+.text-primary {
+  color: #e83e8c !important; /* Pink */
+}
+
+.bg-primary {
+  background-color: #e83e8c !important; /* Pink */
+}
+
+/* Custom styling for the filter sidebar */
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+  color: #e83e8c; /* Pink */
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(232, 62, 140, 0.2);
+}
+
+.form-check-input:checked {
+  background-color: #e83e8c; /* Pink */
+  border-color: #e83e8c;
+}
+
+/* Custom styling for pagination */
+.page-item.active .page-link {
+  background-color: #e83e8c; /* Pink */
+  border-color: #e83e8c;
+}
+
+.page-link {
+  color: #e83e8c; /* Pink */
+}
+
+.page-link:hover {
+  color: #d33076; /* Darker pink */
+}
+
+/* Navbar custom styling */
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #f8e1eb; /* Light pink */
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #e83e8c !important; /* Pink */
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #e83e8c !important; /* Pink */
+}
+
+/* Footer styling */
+footer a:hover {
+  color: #e83e8c !important; /* Pink */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .hero-banner {
+    text-align: center;
+  }
+}

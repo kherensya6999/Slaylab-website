@@ -1,0 +1,629 @@
+/* Custom CSS for SlayLab Beauty E-Commerce */
+
+:root {
+    /* Brand Colors */
+    --pink-primary: #f8a4c1;
+    --pink-light: #f8d0e0;
+    --pink-dark: #9c4668;
+    --mint-green: #a8e6cf;
+    --mint-light: #e0f7ef;
+    --cream: #f8e8e8;
+    --cream-light: #f8f9fa;
+    --text-dark: #333333;
+    --text-muted: #6c757d;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    color: var(--text-dark);
+    background-color: var(--cream-light);
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", serif;
+  }
+  
+  /* Header & Navigation */
+  .header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .navbar {
+    padding: 15px 0;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: var(--pink-primary);
+  }
+  
+  .navbar-actions i {
+    font-size: 18px;
+    color: var(--text-dark);
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-actions a:hover i {
+    color: var(--pink-primary);
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--pink-primary);
+    color: white;
+    font-size: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: var(--pink-primary);
+    border-color: var(--pink-primary);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--pink-dark);
+    border-color: var(--pink-dark);
+  }
+  
+  .btn-outline-primary {
+    border-color: var(--pink-primary);
+    color: var(--pink-primary);
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--pink-primary);
+    border-color: var(--pink-primary);
+    color: white;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+  }
+  
+  .hero-slide {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(248, 232, 232, 0.9), transparent);
+  }
+  
+  .hero-content {
+    padding: 100px 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+    max-width: 500px;
+  }
+  
+  /* Section Styling */
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Category Cards */
+  .category-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    background-color: white;
+    height: 100%;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .category-image {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .category-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .category-card:hover .category-image img {
+    transform: scale(1.05);
+  }
+  
+  .category-content {
+    padding: 20px;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .category-description {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+  
+  /* Product Cards */
+  .product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+    background-color: white;
+    height: 100%;
+    position: relative;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--mint-light);
+    color: var(--pink-dark);
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    z-index: 2;
+  }
+  
+  .product-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .product-card:hover .product-image img {
+    transform: scale(1.05);
+  }
+  
+  .product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .product-card:hover .product-overlay {
+    opacity: 1;
+  }
+  
+  .product-content {
+    padding: 15px;
+  }
+  
+  .product-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--pink-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .product-rating {
+    font-size: 0.8rem;
+    color: #ffc107;
+    margin-bottom: 0.5rem;
+  }
+  
+  .rating-count {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    margin-left: 5px;
+  }
+  
+  /* Subscription Banner */
+  .subscription-banner {
+    background-color: var(--cream);
+  }
+  
+  .subscription-card {
+    background-color: var(--pink-light);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .subscription-card::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 160px;
+    height: 160px;
+    background-color: var(--mint-green);
+    opacity: 0.2;
+    border-radius: 50%;
+  }
+  
+  .subscription-card::after {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 160px;
+    height: 160px;
+    background-color: var(--pink-primary);
+    opacity: 0.2;
+    border-radius: 50%;
+  }
+  
+  .subscription-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--pink-dark);
+  }
+  
+  .subscription-text {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+  }
+  
+  .discount-badge {
+    display: inline-block;
+    background-color: var(--pink-primary);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 5px 15px;
+    border-radius: 30px;
+  }
+  
+  .discount-badge .small {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  
+  /* Testimonials */
+  .testimonial-card {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .before-after-container {
+    margin-bottom: 20px;
+  }
+  
+  .before-after-label {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--pink-primary);
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-rating {
+    color: #ffc107;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-quote {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  .testimonial-quote::before,
+  .testimonial-quote::after {
+    content: "\201C";
+    font-size: 2rem;
+    color: var(--pink-light);
+    position: absolute;
+    left: 0;
+    top: -10px;
+  }
+  
+  .testimonial-quote::after {
+    content: "\201D";
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: -30px;
+  }
+  
+  .testimonial-author {
+    font-weight: 600;
+    text-align: right;
+    color: var(--text-dark);
+  }
+  
+  .join-badge {
+    display: inline-block;
+    background-color: var(--pink-light);
+    color: var(--pink-dark);
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 30px;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: white;
+    padding-top: 60px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .footer-logo {
+    margin-bottom: 20px;
+  }
+  
+  .footer-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: var(--pink-primary);
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: var(--mint-light);
+    color: var(--pink-primary);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    background-color: var(--pink-primary);
+    color: white;
+  }
+  
+  .newsletter-form .form-control {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-color: var(--pink-light);
+  }
+  
+  .newsletter-form .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .rating {
+    color: #ffc107;
+  }
+  
+  .footer-bottom {
+    padding-top: 20px;
+    margin-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .footer-bottom-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  
+  .footer-bottom-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-bottom-links a:hover {
+    color: var(--pink-primary);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991.98px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .navbar-actions {
+      margin-top: 15px;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .hero-section,
+    .hero-slide {
+      height: 500px;
+    }
+  
+    .hero-content {
+      padding: 80px 0;
+      text-align: center;
+    }
+  
+    .hero-title {
+      font-size: 2rem;
+    }
+  
+    .hero-subtitle {
+      font-size: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .section-title {
+      font-size: 1.8rem;
+    }
+  
+    .subscription-title {
+      font-size: 1.8rem;
+      text-align: center;
+    }
+  
+    .subscription-text {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .discount-badge {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+    }
+  
+    .footer-bottom-links {
+      justify-content: center;
+      margin-top: 15px;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .hero-section,
+    .hero-slide {
+      height: 400px;
+    }
+  
+    .hero-content {
+      padding: 60px 0;
+    }
+  
+    .hero-title {
+      font-size: 1.8rem;
+    }
+  
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .testimonial-card {
+      padding: 20px;
+    }
+  
+    .testimonial-quote {
+      font-size: 1rem;
+    }
+  }
+  
